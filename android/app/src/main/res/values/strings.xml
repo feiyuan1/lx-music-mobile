@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">LX Music</string>
+  <string name="app_name">LX Music</string>
+  <string name="wechat_notification_count_text">微信消息数</string>
 </resources>
