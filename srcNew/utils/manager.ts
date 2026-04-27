@@ -3,13 +3,13 @@ import type { valueof } from 'srcNew/types/utils'
 /**
  * 利用发布订阅完成跨组件通信
  */
-export const keysVariable = {
+export const keysMap = {
   imageFill: 'image-fill'
 } as const
 
 export type SubScriber<T = any> = (props?: T) => void
 
-type keys = valueof<typeof keysVariable>
+type keys = valueof<typeof keysMap>
 
 type Map = {
   [key in keys]?: SubScriber[]

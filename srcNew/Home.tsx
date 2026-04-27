@@ -18,7 +18,7 @@ import { MAX_GAP, MAX_LENGTH, type, userId } from 'srcNew/constants'
 import { clearCache, readLogFile, writeLogFile } from 'srcNew/utils/fs'
 import type { log, logs, UpdateList } from './types/log'
 import LogList from './components/LogList'
-import getManager, { keys, type SubScriber } from './utils/manager'
+import getManager, { keysMap, type SubScriber } from './utils/manager'
 import type { Timeout } from './types/utils'
 
 interface HomeProps {
@@ -129,7 +129,7 @@ const ImageModal = () => {
   }, [])
 
   useEffect(() => {
-    const unsub = subscribe(keys.imageFill, subscriber)
+    const unsub = subscribe(keysMap.imageFill, subscriber)
 
     return unsub
   }, [subscriber])
