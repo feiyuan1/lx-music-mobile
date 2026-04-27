@@ -1,5 +1,5 @@
 import './shim'
-import './src/app'
+import './srcNew/app'
 import { Navigation } from 'react-native-navigation'
 import { initFileStructure, syncLog } from 'srcNew/utils/fs'
 import HistoryScreen from 'srcNew/History'
