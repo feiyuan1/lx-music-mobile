@@ -2,20 +2,20 @@ const baseRule = {
   'no-new': 'off',
   camelcase: 'off',
   'no-return-assign': 'off',
-  'space-before-function-paren': ['error', 'never'],
+  // 'space-before-function-paren': ['error', 'never'],
   'no-var': 'error',
   'no-fallthrough': 'off',
   eqeqeq: 'off',
   'require-atomic-updates': ['error', { allowProperties: true }],
-  'no-multiple-empty-lines': [1, { max: 2 }],
-  'comma-dangle': [2, 'always-multiline'],
+  // 'no-multiple-empty-lines': [1, { max: 2 }],
+  // 'comma-dangle': [2, 'always-multiline'],
   'standard/no-callback-literal': 'off',
   'prefer-const': 'off',
   'no-labels': 'off',
   'node/no-callback-literal': 'off',
   'multiline-ternary': 'off',
   'react/display-name': 'off',
-  'react/prop-types': 'off',
+  'react/prop-types': 'off'
 }
 
 module.exports = {
@@ -25,11 +25,10 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
-  ],
-  plugins: [
-    'react',
+    'prettier'
   ],
   rules: baseRule,
+  plugins: ['react'],
   parser: '@babel/eslint-parser',
   overrides: [
     {
@@ -44,17 +43,17 @@ module.exports = {
         '@typescript-eslint/restrict-template-expressions': [
           1,
           {
-            allowBoolean: true,
-          },
+            allowBoolean: true
+          }
         ],
         '@typescript-eslint/no-misused-promises': [
           'error',
           {
             checksVoidReturn: {
               arguments: false,
-              attributes: false,
-            },
-          },
+              attributes: false
+            }
+          }
         ],
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/return-await': 'off',
@@ -62,23 +61,19 @@ module.exports = {
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/promise-function-async': 'off'
       },
       parserOptions: {
-        project: './tsconfig.json',
-      },
-    },
+        project: './tsconfig.json'
+      }
+    }
   ],
   settings: {
     react: {
-      version: 'detect', // React version. "detect" automatically picks the version you have installed.
+      version: 'detect' // React version. "detect" automatically picks the version you have installed.
       // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
       // It will default to "latest" and warn if missing, and to "detect" in the future
-    },
+    }
   },
-  ignorePatterns: [
-    'node_modules',
-    '*.min.js',
-    'test.js',
-    '*Test.ts',
-  ],
+  ignorePatterns: ['node_modules', '*.min.js', 'test.js', '*Test.ts']
 }
