@@ -72,3 +72,7 @@ buck-out/
 
 # media resources
 **/*.mp3
+
+# some files genereated from building apk
+android/app/debug/output-metadata.json
+**/*.bundle
