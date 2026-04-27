@@ -61,7 +61,8 @@ module.exports = {
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/ban-types': 'off',
-        '@typescript-eslint/promise-function-async': 'off'
+        '@typescript-eslint/promise-function-async': 'off',
+        '@typescript-eslint/no-confusing-void-expression': 'off'
       },
       parserOptions: {
         project: './tsconfig.json'
